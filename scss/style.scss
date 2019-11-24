@@ -1,0 +1,601 @@
+@import "layout.scss";
+
+.visually-hidden {
+    position: absolute;
+    left: -9999999px;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+body{
+    font-family: 'Aleo', serif;
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff
+}
+
+p{
+    margin: 0;
+}
+
+li{
+    list-style-type: none;
+}
+
+.icon{
+    margin-right: 10px;
+    color: #5474fd;
+    font-size: 30px;
+}
+
+.ba-travel__all{
+    padding: 20px;
+}
+
+.ba-travel-button{
+    padding: 20px 30px;
+    background-color: #496bfe;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 2px;
+
+    &:hover,
+    &:focus{
+        opacity: .5;
+    }
+
+    @media screen and (max-width: 600px){
+        padding: 15px 20px;
+        font-size: 0.75rem;
+    }
+}
+
+.ba-travel-hero{
+    width: 100%;
+    height: 100vh;
+    background: {
+        image: url(../images/hero.jpg);
+        size: cover;
+        repeat: no-repeat; 
+    }
+
+    @media screen and (max-width: 600px){
+        height: inherit;
+    }
+}
+
+.ba-travel-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 260px;
+    font-family: 'Josefin Sans', sans-serif; 
+    text-align: center;
+
+    @media screen and (max-width: 600px){
+        padding-top: 7rem;
+    }
+
+    &__headline{
+        font-size: 3rem;
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0;
+        letter-spacing: 1px;
+    }
+
+    &__subtitle{
+        font-size: 1.375rem;
+        font-weight: 300;
+        color: #fff;
+        margin: 0;
+        letter-spacing: 5px;
+        padding-bottom: 3.4375rem;
+    }
+
+    &__form{
+        display: flex; 
+        justify-content: center; 
+
+        @media screen and (max-width: 600px){
+            width: 75%;
+        }
+    }
+
+    &__input{
+        height: 60px;
+        padding: 1em;
+        border-right: none;
+        width: 500px;
+        font-weight: 400;
+        text-align: center;
+        border: 2px solid #fff;
+
+        @media screen and (max-width: 600px){
+            height: 40px;
+            font-size: 0.75rem;
+        }
+    }
+
+    &__button{
+        display: flex;
+        height: 60px;
+        line-height: 60px;
+        border: 2px solid #fff;
+        border-left: none;
+        background-color: #5474fd;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 300;
+        font-size: .875rem;
+        letter-spacing: 1px;
+        padding: 0 2em;
+        transition: .4s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus{
+            opacity: .5;
+        }
+
+        @media screen and (max-width: 600px){
+            height: 40px;
+            line-height: 40px;
+            padding: 0 1em;
+            font-size: 0.75rem;
+        }
+    }        
+
+    &__scroll{
+        padding-top: 7.5rem;
+        color: #d3d1d1;
+
+        @media screen and (max-width: 600px){
+            padding-top: 3.5rem;
+        }
+    }
+
+    &__scroll-img{
+        width: 15px;
+        height: 9px;
+    }
+
+    @media screen and (max-width: 600px){
+        padding-bottom: 2rem;
+    }
+}
+
+.ba-travel__lupa-img{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+    transform: translateY(80%);
+
+    @media screen and (max-width: 600px){
+        transform: translateY(40%);
+    }
+}
+
+.ba-travel-header{
+    display: flex;
+    align-items: center;
+    padding: 1.875rem 0;
+    background-color: #5474fd;
+
+    @media screen and (max-width: 600px){
+        padding: 0;
+    }  
+}
+
+.ba-travel-header__block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+
+    @media screen and (max-width: 600px){
+        flex-wrap: wrap;
+        padding: 0.5rem 2rem;
+    }
+}
+
+.ba-travel__logo{
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 4px;
+
+    @media screen and (max-width: 600px){
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.ba-travel-menu{
+    @media screen and (max-width: 600px){
+        text-align: center;
+        width: 100%;
+    }
+
+    &__list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 600px){
+            padding: 10px 0 0 0;
+            margin: 0;
+        }
+    }
+
+    &__item{
+        list-style-type: none;
+        text-transform: uppercase;
+        color: #fff;
+        padding-left: 45px;
+
+        &:hover,
+        &:focus{
+            opacity: .5;
+        }
+
+        @media screen and (max-width: 600px){
+            padding-left: 10px;
+            font-size: 0.6rem;
+            text-align: center;
+        }
+    }
+}
+
+// about
+
+.ba-travel-about{
+    height: 685px;
+    background: {
+        image: url(../images/about.jpg);
+        size: cover;
+        repeat: no-repeat; 
+    }
+
+    @media screen and (max-width: 600px){
+        height: inherit;
+    }
+
+    &__block{
+        display: flex;
+    }
+
+    &__left{
+        max-width: 50%;
+        padding-top: 12.1875rem;
+
+        @media screen and (max-width: 600px){
+            max-width: 100%;
+            padding: 2rem;
+        }
+    }
+
+    &__title{
+        font-size: 2.25rem;
+        color: #fff;
+        font-weight: 400;
+        margin: 0;
+
+        @media screen and (max-width: 600px){
+            font-size: 1.75rem;
+        }
+    }
+
+    &__info{
+        font-family: 'Josefin Sans', sans-serif; 
+        color: #d3d1d1;
+        line-height: 1.625em;
+        letter-spacing: 1px;
+        padding-top: 4.0625rem;
+        padding-bottom: 2.8125rem;
+        margin: 0;
+
+        @media screen and (max-width: 600px){
+            padding: 2rem 0;
+            font-size: 0.75rem;
+        }
+    }
+
+    &__right{
+        max-width: 50%;
+        padding-top: 7.5rem;
+        padding-left: 5rem;
+
+        @media screen and (max-width: 600px){
+            display: none;
+        }
+    }
+}
+
+.image{
+    padding-left: 7.5rem;
+}
+
+// infographic
+
+.ba-travel-infographic{
+    background-color: #333333;
+
+    &__block{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 6.125rem;
+        padding-bottom: 7rem;
+
+        @media screen and (max-width: 600px){
+            flex-direction: column;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        } 
+    }
+
+    &__search{
+        text-align: center;
+        width: 33%;
+
+        @media screen and (max-width: 600px){
+            padding: 25px 0;
+            width: 50%;
+        } 
+    }
+
+    &__search-img{
+        width: 58px; 
+        height: 57px;
+    }
+
+    &__checked-img{
+        width: 60px; 
+        height: 61px;
+    }
+
+    &__like-img{
+        width: 62px; 
+        height: 59px;
+    }
+
+    &__info{
+        font-size: 2.25rem;
+        color: #fff;
+        font-weight: 400;
+        padding-top: 20px;
+
+        @media screen and (max-width: 600px){
+            font-size: 1.5rem;
+        } 
+    }
+}
+
+// hotel
+
+.ba-travel-about-hotel{
+    position: relative;
+    padding-top: 14.375rem;
+    padding-bottom: 6.25rem;
+    background: {
+        image: url(../images/hotel1.jpg);
+        size: cover;
+        repeat: no-repeat; 
+    }
+
+    @media screen and (max-width: 600px){
+        padding: 5rem 2rem;
+    } 
+
+    &__block{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        width: 542px;
+        background-color: rgba(0,0,0, 0.8);
+        color: #d3d1d1;
+        padding: 45px 30px;
+    }
+
+    &__country{
+        font-size: 1.25rem;
+        letter-spacing: 0.75px;
+    }
+
+    &__title{
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: 0;
+        padding: 1.5rem 0;
+    }
+
+    &__info{
+        line-height: 1.625em;
+        padding-bottom: 2.875rem;
+    }
+}
+
+// hotel 2
+
+.flex{
+    display: flex;
+}
+
+.ba-travel-about-hotel2{
+    position: relative;
+    padding-top: 14.375rem;
+    padding-bottom: 6.25rem;
+    background: {
+        image: url(../images/hotel2.jpg);
+        size: cover;
+        repeat: no-repeat; 
+    }
+
+    @media screen and (max-width: 600px){
+        padding: 5rem 2rem;
+        text-align: right;
+    } 
+
+    &__block-right{
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 300;
+        right: 20.4375rem;
+        width: 542px;
+        background-color: rgba(0,0,0, 0.8);
+        margin-left: auto;
+        color: #d3d1d1;
+        padding: 45px 30px;
+    }
+}
+
+// feedback
+
+.ba-travel-feedback{
+    position: relative;
+    display: flex;
+    background: {
+        image: url(../images/feedback.jpg);
+        size: cover;
+        repeat: no-repeat; 
+    }
+
+    &__block{
+        padding: 6.625rem 0 12.5rem 0;
+
+        @media screen and (max-width: 600px){
+            padding: 3rem 2rem;
+        }
+    }
+
+    &__title{
+        
+        padding-bottom: 5.875rem;
+        font-size: 2.25rem;
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+        margin: 0;
+
+        @media screen and (max-width: 600px){
+            padding-bottom: 2rem;
+            font-size: 1.75rem;
+        } 
+    }
+
+    &__content{
+        background-color: #333333;
+        padding: 3.2rem 3.75rem;
+
+        @media screen and (max-width: 600px){
+            padding: 3rem 2rem 2rem 2rem;
+        } 
+    }
+
+    &__name{
+        font-size: 1.25rem;
+        text-transform: uppercase;
+        margin: 0;
+        padding-bottom: 1.5rem;
+        color: #d3d1d1;
+        font-weight: 300;
+    }
+
+    &__info{
+        line-height: 1.625em;
+        color: #d3d1d1;
+    }
+}
+
+.ba-travel-feedback__user{
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 600px){
+        flex-direction: column;
+    } 
+}
+
+.ba-travel-feedback__img{
+    @media screen and (max-width: 600px){
+        width: 100%;
+        object-fit: inherit;
+    } 
+}
+
+// social
+
+.ba-travel-footer{
+    font-family: 'Josefin Sans', sans-serif;
+    position: relative;
+    display: flex;
+    background-color: #232323;
+
+    &__block{
+        text-align: center;
+        padding-top: 7.125rem;
+        padding-bottom: 3.125rem;
+
+        @media screen and (max-width: 600px){
+            padding: 2rem 0;
+        } 
+    }
+
+    &__headline{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: #fff;
+        letter-spacing: 5px;
+    }
+
+    &__subtitle{
+        font-size: 0.85rem;
+        font-weight: 300;
+        color: #d3d1d1;
+        letter-spacing: 3px;
+        padding-top: 10px;
+    }
+}
+
+.ba-about__social_list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+    margin: 0;
+}
+
+.ba-about__social_item{
+    margin-right: 21px;
+    
+        &:last-child{
+            margin-right: 0;
+        }
+}
+
+
+.icons{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    height: 20px;
+    width: 20px;
+
+        &:hover{
+            color: #5474fd;
+        }
+}
